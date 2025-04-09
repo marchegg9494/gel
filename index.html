@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Verifica Buono Gelato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; padding: 20px; background-color: #fefae0; }
+    input[type="text"] { font-size: 1.2em; padding: 10px; width: 100%; }
+    input[type="submit"] { margin-top: 10px; font-size: 1.2em; padding: 10px; width: 100%; background-color: #d4a373; border: none; color: white; border-radius: 5px; }
+    .msg { margin-top: 20px; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <h2>Verifica Buono Gelato</h2>
+  <form method="POST">
+    <input type="text" name="codice" placeholder="Inserisci il codice" required>
+    <input type="submit" value="Verifica">
+  </form>
+  {% if messaggio %}
+    <div class="msg">{{ messaggio }}</div>
+  {% endif %}
+</body>
+</html>
